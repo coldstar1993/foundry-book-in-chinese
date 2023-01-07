@@ -1,6 +1,6 @@
 ## 部署
 
-Forge 可以使用 [`forge create`](../reference/forge/forge-create.md) 命令将智能合约部署到给定网络。
+Forge 可以使用 [`forge create`](../reference/forge/forge-create.md) 命令将智能合约部署到指定网络。
 
 Forge 一次只能部署一个合约。
 
@@ -66,7 +66,7 @@ $ forge create --rpc-url <your_rpc_url> \
 
 此外，您可能需要提供：
 - ABI 编码格式的构造函数参数，如果有的话
-- [编译器版本](https://etherscan.io/solcversions) 用于构建，带有来自提交版本前缀的 8 个十六进制数字（提交通常不是夜间构建）。 如果未指定，则会自动检测到。
+- [编译器版本](https://etherscan.io/solcversions) 用于构建，带有来自提交版本前缀的 8 个十六进制数字（提交通常不是nightly构建）。 如果未指定，则会自动检测到。
 - 优化次数，如果激活了 Solidity 优化器。 如果未指定，则会自动检测到。
 - [链 ID](https://evm-chainlist.netlify.app/)，如果合约不在以太坊主网上
 
@@ -105,22 +105,22 @@ Contract successfully verified.
 
 <br>
 
-＃＃＃ 故障排除
+### 故障排除
 
 ##### `位于 1 处的无效字符 'x'`
 
 确保私钥字符串不以“0x”开头。
 
-#####`EIP-1559 未激活`
+##### `EIP-1559 未激活`
 RPC 服务器不支持或未激活 EIP-1559。 传递 `--legacy` 标志以使用旧交易而不是 EIP-1559 交易。 如果您在本地环境中进行开发，则可以使用 Hardhat 而不是 Ganache。
 
-#####`无法解析tokens`
+##### `无法解析tokens`
 确保传递的参数类型正确。
 
 ##### `签名错误`
 确保私钥正确。
 
-#####`用于验证的编译器版本提交`
+##### `用于验证的编译器版本提交`
 如果您想检查您在本地运行的确切提交，请尝试：`~/.svm/0.x.y/solc-0.x.y --version` 其中 `x` 和
 `y` 分别是主要和次要版本号。 其输出类似于：
 

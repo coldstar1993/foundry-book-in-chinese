@@ -2,7 +2,7 @@
 
 测试是用 Solidity 编写的。 如果测试功能revert，则测试失败，否则通过。
 
-让我们回顾一下最常见的编写测试的方式，使用 [Forge Standard Library](https://github.com/foundry-rs/forge-std) 的 `Test` 契约，这是编写测试的首选方式 与Forge。
+让我们回顾一下最常见的编写测试的方式，使用 [Forge Standard Library](https://github.com/foundry-rs/forge-std) 的 `Test` 合约，这是编写测试的首选方式 与Forge。
 
 在本节中，我们将使用 Forge Std 的“Test”合约中的函数复习基础知识，该合约本身是 [DSTest](https://github.com/dapphub/ds-test) 的超集。 您将学习如何使用 Forge 标准库中的更多高级内容 [soon](./forge-std.md)。
 
